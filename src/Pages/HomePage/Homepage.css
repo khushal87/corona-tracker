@@ -1,0 +1,70 @@
+.report {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+}
+
+.cases {
+    background-color: white;
+    width: auto;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.cases-text {
+    color: #282c34;
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+.cases-data {
+    color: red;
+    padding-bottom: 10px;
+}
+
+.deaths {
+    background-color: white;
+    width: auto;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+
+}
+
+.deaths-text {
+    color: #282c84;
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+.deaths-data {
+    color: #282c34;
+    padding-bottom: 10px;
+}
+
+
+.recovered {
+    background-color: white;
+    width: auto;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+
+}
+
+.recovered-text {
+    color: #282c34;
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+.recovered-data {
+    color: green;
+    padding-bottom: 10px;
+}
+
+.detailed-data {
+    margin-top: 10px;
+}
