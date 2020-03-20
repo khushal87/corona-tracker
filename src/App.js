@@ -56,7 +56,7 @@ class App extends Component {
           <div className="report row">
             <div className="col-xs-12 col-sm-10 col-md-5.5 col-lg-2">
               <div className="cases">
-                <h5 className="cases-text">Total Confirmed</h5>
+                <h5 className="cases-text">Total Confirmed Cases</h5>
                 <h1 className="cases-data">{this.state.data.total_cases}</h1>
               </div>
             </div>

@@ -41,11 +41,12 @@ class StatesData extends Component {
                     this.state.filter_data.map((indiData, key) => {
                         return <div className="country-data">
                             <div className="country-name">{indiData.NameOfState + " "}
-                                <div style={{ display: 'flex', flexDirection: "row", marginLeft: "80px", marginRight: "70px" }}>
-                                    <div className="country-deaths" style={{ color: "red", margin: "5px" }}>Cases : {indiData.TotalConfirmedCasesIndian}</div>
-                                    <div className="country-deaths" style={{ color: "#282c84", margin: "5px" }}>Cured : {indiData.Cured}</div>
-                                    <div className="country-deaths" style={{ color: "green", margin: "5px" }}>Deaths : {indiData.Death}</div>
+                                <div style={{ display: 'flex', flexDirection: "row", justifyContent: "space-around" }}>
+                                    <div className="country-deaths" style={{ color: "red" }}>Cases : {indiData.TotalConfirmedCasesIndian}</div>
+                                    <div className="country-deaths" style={{ color: "#282c84" }}>Cured : {indiData.Cured}</div>
+                                    <div className="country-deaths" style={{ color: "green" }}>Deaths : {indiData.Death}</div>
                                 </div>
+
                             </div>
                         </div>
                     })
