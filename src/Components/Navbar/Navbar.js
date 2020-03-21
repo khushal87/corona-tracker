@@ -29,9 +29,9 @@ class Navbar extends Component {
                         </div>
                         <div className={`menu__body ${this.state.toggle ? className : ""}`}>
                             <ul class="menu__list">
-                                <li><Link to='/sources' class="menu__link">Sources</Link></li>
-                                <li><Link to='/helpline' class="menu__link">Helpline</Link></li>
                                 <li><Link to='/' class="menu__link">Home</Link></li>
+                                <li><Link to='/helpline' class="menu__link">Helpline</Link></li>
+                                <li><Link to='/sources' class="menu__link">Sources</Link></li>
                                 <li><Link to='/about' class="menu__link">About Us</Link></li>
 
                             </ul>

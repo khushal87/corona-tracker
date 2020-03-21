@@ -52,7 +52,7 @@ a:hover {
     display: -ms-flexbox;
     display: flex;
     color: #4d4959;
-    font-size: 13px;
+    font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2.6px;
@@ -231,5 +231,6 @@ a:hover {
 .header__logo .logoName {
     margin-top: 30px;
     color: white;
-    margin-left: 20px;
+    margin-left: -40px;
+    font-size: 40px;
 }

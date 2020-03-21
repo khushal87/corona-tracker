@@ -57,7 +57,7 @@ class Homepage extends Component {
                 <Navbar />
                 <header className="App-header">
                     <h2 style={{ margin: "0px", paddingTop: "150px" }}>Coronavirus Cases All Over The World</h2>
-                    <div style={{ paddingTop: "10px", marginLeft: "5px", marginRight: "5px" }}>
+                    <div style={{ paddingTop: "5px", marginLeft: "5px", marginRight: "5px" }}>
                         <Blink color='#d9534f ' text='Support Janta Curfew: Sunday 22 March,2020 from 7am to 9pm' fontSize='18'>
                             Support Janta Curfew: Sunday 22 March,2020 from 7am to 9pm
                     </Blink>
@@ -100,7 +100,7 @@ class Homepage extends Component {
                             </div>
                             <div className="new-deaths">
                                 <h5 className="new-deaths-text">New Death Cases in India</h5>
-                                <h1 className="new-deaths-data">{this.state.india_data.new_deaths}</h1>
+                                <h1 className="new-deaths-data">{this.state.india_data.new_deaths !== "" ? this.state.india_data.new_deaths : "NA"}</h1>
                             </div>
                         </div>
                     </div>
