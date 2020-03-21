@@ -14,7 +14,7 @@ class AboutUs extends Component {
                         <h5 className="content">We are with you at your distress.</h5>
                     </div>
                 </header>
-                <div className="main-content">
+                <div className="main-content" >
                     <h4>Covid-19 is causing a devastating change in humankind and also in the global economy.
                     <p>In the world full of rumours we aim to provide you with all the updates you need for fighting this outbreak.</p>
                         <p>Please do reach us if you have any query at this <a href="mailto:hrithik.agarwal87@gmail.com">email.</a>.</p>

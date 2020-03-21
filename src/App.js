@@ -10,9 +10,15 @@ import Homepage from './Pages/HomePage/Homepage';
 import Helpline from './Pages/Helpline/Helpline';
 import Sources from './Pages/Sources/Sources';
 import AboutUs from './Pages/About/AboutUs';
+import ReactGA from 'react-ga';
 
 class App extends Component {
+  initializeAnalytics = () => {
+    ReactGA.initialize('UA-161398736-1');
+    ReactGA.pageview('/');
+  }
   render() {
+    this.initializeAnalytics();
     return (
       <div className="App">
         <BrowserRouter>
