@@ -52,7 +52,7 @@ class CasesRecovered extends Component {
                 <input name="search" className="search-input" onChange={this.onChangeHandler} />
                 {
                     this.state.filter_data.map((indiData, key) => {
-                        return <div className="country-data">
+                        return <div className="country-data" key={key}>
                             <div className="country-name">{indiData.country_name + " "} <div className="country-recovered">{indiData.total_recovered}</div></div>
                         </div>
                     })

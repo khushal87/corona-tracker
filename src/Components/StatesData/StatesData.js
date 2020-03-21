@@ -39,7 +39,7 @@ class StatesData extends Component {
                 <input name="search" className="search-input" onChange={this.onChangeHandler} />
                 {
                     this.state.filter_data.map((indiData, key) => {
-                        return <div className="country-data">
+                        return <div className="country-data" key={key}>
                             <div className="country-name">{indiData.NameOfState + " "}
                                 <div style={{ display: 'flex', flexDirection: "row", justifyContent: "space-around" }}>
                                     <div className="country-deaths" style={{ color: "red" }}>Cases : {indiData.TotalConfirmedCasesIndian}</div>

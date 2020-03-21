@@ -6,6 +6,7 @@ import StatesData from '../../Components/StatesData/StatesData';
 import './Homepage.css';
 import Navbar from '../../Components/Navbar/Navbar';
 import Blink from 'react-blink-text';
+import Feeds from '../../Components/Feeds/Feeds';
 
 class Homepage extends Component {
     constructor(props) {
@@ -118,6 +119,9 @@ class Homepage extends Component {
                     <div className="row" style={{ marginLeft: "10px", marginRight: "10px" }}>
                         <div className="col-xs-11.5 col-sm-10 col-md-5.5 col-lg-4 detailed-data">
                             <StatesData />
+                        </div>
+                        <div className="col-xs-11.5 col-sm-10 col-md-5.5 col-lg-4 detailed-data">
+                            <Feeds />
                         </div>
                     </div>
                 </header>
