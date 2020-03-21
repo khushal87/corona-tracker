@@ -16,6 +16,8 @@ class App extends Component {
   initializeAnalytics = () => {
     ReactGA.initialize('UA-161398736-1');
     ReactGA.pageview('/');
+    ReactGA.pageview('/sources');
+    ReactGA.pageview('/about');
   }
   render() {
     this.initializeAnalytics();
