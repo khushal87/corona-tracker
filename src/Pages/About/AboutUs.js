@@ -20,7 +20,7 @@ class AboutUs extends Component {
                         <p>Please do reach us if you have any query at this <a href="mailto:hrithik.agarwal87@gmail.com">email.</a>.</p>
                         <p>Thank you, Hope you help the community by sharing this and nullifying the rumour in the society.</p>
                     Regards,
-                    <a href="https://www.facebook.com/khushal.agarwal87">Khushal Agarwal</a>
+                    <a href="https://www.linkedin.com/in/khushal-agarwal-547370166/">Khushal Agarwal</a>
                     </h4>
                     <h3>This app is crafted by </h3>
                     <img src={Image} style={{ borderRadius: "50px", height: "200px", width: "200px", marginBottom: "20px" }} />
