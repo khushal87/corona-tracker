@@ -27,6 +27,7 @@ class PostFeed extends Component {
             credentials: 'same-origin'
         }).then((res) => {
             if (res.status === 200) {
+                this.setState({ data: "" });
                 alert("Posted");
             }
         }).catch((err) => {
@@ -37,7 +38,7 @@ class PostFeed extends Component {
         return (
             <div className="form">
                 <form method="post" onSubmit={this.onSubmitHandler} style={{ marginTop: "20px" }}>
-                    <input name="data" onChange={this.inputChangeHandler} />
+                    <input name="data" value={this.state.data} onChange={this.inputChangeHandler} />
                     <button className="btn primary" type="submit">Submit</button>
                 </form>
             </div>
