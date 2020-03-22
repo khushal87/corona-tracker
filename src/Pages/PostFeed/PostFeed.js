@@ -18,6 +18,13 @@ class PostFeed extends Component {
         e.preventDefault();
         Axios.post('https://covid19-repo.herokuapp.com/data', {
             data: this.state.data
+        }, {
+            headers: {
+                Accept: "application/json",
+                'Content-Type': "application/json",
+            },
+            withCredentials: false,
+            credentials: 'same-origin'
         }).then((res) => {
             if (res.status === 200) {
                 alert("Posted");
