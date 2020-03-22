@@ -7,6 +7,9 @@ import './Homepage.css';
 import Navbar from '../../Components/Navbar/Navbar';
 import Blink from 'react-blink-text';
 import Feeds from '../../Components/Feeds/Feeds';
+import Axios from 'axios';
+import cheerio from 'cheerio';
+import { scrappedData } from '../../Services/EconomicTimesData';
 
 class Homepage extends Component {
     constructor(props) {
@@ -14,13 +17,25 @@ class Homepage extends Component {
         this.state = {
             data: {},
             fetch_date: "",
-            india_data: {}
+            india_data: {},
         }
     }
 
+    fetchData = async () => {
+        const siteUrl = "https://economictimes.indiatimes.com/coronavirus";
 
+    };
 
     componentDidMount() {
+        var config = {
+            headers: { 'Access-Control-Allow-Origin': '*' }
+        };
+        const siteUrl = "https://economictimes.indiatimes.com/coronavirus";
+        Axios.get(siteUrl, config).then(response => {
+            console.log(response.data);
+        }).catch((error) => {
+            console.log(error);
+        })
         fetch("https://coronavirus-monitor.p.rapidapi.com/coronavirus/worldstat.php", {
             "method": "GET",
             "headers": {
@@ -120,9 +135,9 @@ class Homepage extends Component {
                         <div className="col-xs-11.5 col-sm-10 col-md-5.5 col-lg-4 detailed-data">
                             <StatesData />
                         </div>
-                        <div className="col-xs-11.5 col-sm-10 col-md-5.5 col-lg-4 detailed-data">
+                        {/* <div className="col-xs-11.5 col-sm-10 col-md-5.5 col-lg-4 detailed-data">
                             <Feeds />
-                        </div>
+                        </div> */}
                     </div>
                 </header>
             </div>
