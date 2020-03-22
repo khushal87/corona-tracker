@@ -12,6 +12,8 @@ class Feeds extends Component {
     }
     componentDidMount() {
         const data = [
+            { title: "Lockdown at all West Bengal municipal towns till 31 March", date: "22 Mar,2020 16:10" },
+            { title: "I have no option left but to apply Section 144 in Maharashtra: Maha CM", date: "22 Mar,2020 3:16" },
             { title: "West Bengal govt suspends interstate bus services till March 31", date: "22 Mar,2020 2:12pm" },
             { title: "7 more persons have been tested positive for Coronavirus in Punjab", date: "22 Mar,2020 2:00pm" },
             { title: "Mumbai local trains to be shut by Railways from tonight till march end", date: "22 Mar,2020 1:44pm" },
