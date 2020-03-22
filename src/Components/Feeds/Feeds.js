@@ -34,7 +34,7 @@ class Feeds extends Component {
                 {
                     this.state.filter_data.map((indiData, key) => {
                         return <div className="country-data" key={key}>
-                            <a href={indiData.url}><div className="country-name">{indiData.description + " "}</div></a>
+                            <a href={indiData.url}><div className="country-name">{indiData.title + " "}</div></a>
                             <div className="country-cases" style={{ color: "gray", fontSize: "14px" }}>{indiData.date}</div>
                         </div>
                     })
