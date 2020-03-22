@@ -135,9 +135,9 @@ class Homepage extends Component {
                         <div className="col-xs-11.5 col-sm-10 col-md-5.5 col-lg-4 detailed-data">
                             <StatesData />
                         </div>
-                        {/* <div className="col-xs-11.5 col-sm-10 col-md-5.5 col-lg-4 detailed-data">
+                        <div className="col-xs-11.5 col-sm-10 col-md-5.5 col-lg-4 detailed-data">
                             <Feeds />
-                        </div> */}
+                        </div>
                     </div>
                 </header>
             </div>

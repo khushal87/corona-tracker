@@ -11,20 +11,11 @@ class Feeds extends Component {
         }
     }
     componentDidMount() {
-        var url = 'http://newsapi.org/v2/everything?' +
-            'q=coronavirus&' +
-            'from=2020-03-21&' +
-            'sortBy=popularity&' +
-            'apiKey=c88a88b563db4cc590a77cfeda6ecf04';
-
-        var req = new Request(url);
-
-        fetch(req)
-            .then(function (response) {
-                return (response.json());
-            }).then((res) => {
-                this.setState({ data: res.articles, filter_data: res.articles });
-            })
+        const data = [
+            { title: "Railway halts operation of all trains except goods trains till March 31st as Covid-19 cases rise in India: Railway ministry", date: "22 Mar,2020 1:33pm" },
+            { title: "Coronavirus cases In India rises to 341 and death tolls 6", date: "22 Mar,2020 1:15pm" }
+        ].sort((a, b) => a.date - b.data)
+        this.setState({ data: data, filter_data: data })
     }
 
     render() {
@@ -37,7 +28,7 @@ class Feeds extends Component {
                     this.state.filter_data.map((indiData, key) => {
                         return <div className="country-data" key={key}>
                             <a href={indiData.url}><div className="country-name">{indiData.title + " "}</div></a>
-                            <div className="country-cases" style={{ color: "gray", fontSize: "14px" }}>{moment(indiData.publishedAt).format('D MMM YYYY  HH:mm')}</div>
+                            <div className="country-cases" style={{ color: "gray", fontSize: "14px" }}>{indiData.date}</div>
                         </div>
                     })
                 }
