@@ -11,6 +11,7 @@ import Helpline from './Pages/Helpline/Helpline';
 import Sources from './Pages/Sources/Sources';
 import AboutUs from './Pages/About/AboutUs';
 import ReactGA from 'react-ga';
+import PostFeed from './Pages/PostFeed/PostFeed';
 
 class App extends Component {
   initializeAnalytics = () => {
@@ -29,6 +30,7 @@ class App extends Component {
             <Route path='/sources' component={Sources} />
             <Route path='/helpline' component={Helpline} />
             <Route path='/about' component={AboutUs} />
+            <Route path='/post-feed' component={PostFeed} />
             <Redirect to='/404' />
           </Switch>
         </BrowserRouter>
