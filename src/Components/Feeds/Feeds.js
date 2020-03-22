@@ -12,6 +12,7 @@ class Feeds extends Component {
     }
     componentDidMount() {
         const data = [
+            { title: "7 more persons have been tested positive for Coronavirus in Punjab", date: "22 Mar,2020 2:00pm" },
             { title: "Mumbai local trains to be shut by Railways from tonight till march end", date: "22 Mar,2020 1:44pm" },
             { title: "Railway halts operation of all trains except goods trains till March 31st as Covid-19 cases rise in India: Railway ministry", date: "22 Mar,2020 1:33pm" },
             { title: "Coronavirus cases In India rises to 341 and death tolls rises to 6", date: "22 Mar,2020 1:15pm" },
