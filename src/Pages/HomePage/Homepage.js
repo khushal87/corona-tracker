@@ -112,7 +112,7 @@ class Homepage extends Component {
                         <div className="column col-xs-12 col-sm-10 col-md-5.5 col-lg-3 new-india" >
                             <div className="new-cases">
                                 <h5 className="new-cases-text">New Cases in India</h5>
-                                <h1 className="new-cases-data">{this.state.india_data.new_cases}</h1>
+                                <h1 className="new-cases-data">{this.state.india_data.new_cases !== "" ? this.state.india_data.new_cases : "NA"}</h1>
                             </div>
                             <div className="new-deaths">
                                 <h5 className="new-deaths-text">New Death Cases in India</h5>
