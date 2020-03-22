@@ -13,7 +13,9 @@ class Feeds extends Component {
     componentDidMount() {
         const data = [
             { title: "Railway halts operation of all trains except goods trains till March 31st as Covid-19 cases rise in India: Railway ministry", date: "22 Mar,2020 1:33pm" },
-            { title: "Coronavirus cases In India rises to 341 and death tolls 6", date: "22 Mar,2020 1:15pm" }
+            { title: "Coronavirus cases In India rises to 341 and death tolls rises to 6", date: "22 Mar,2020 1:15pm" },
+            { title: "Mumbai local trains to be shut by Railways from tonight till march end", date: "22 Mar,2020 1:44pm" },
+
         ].sort((a, b) => a.date - b.data)
         this.setState({ data: data, filter_data: data })
     }
@@ -22,8 +24,6 @@ class Feeds extends Component {
         return (
             <div className="countries-data">
                 <h3 className="heading"><span style={{ color: "red" }}>Live Feeds </span> from all over the world</h3>
-                <i class="fa fa-user icon"></i>
-                <input name="search" className="search-input" onChange={this.onChangeHandler} />
                 {
                     this.state.filter_data.map((indiData, key) => {
                         return <div className="country-data" key={key}>
