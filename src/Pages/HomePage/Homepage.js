@@ -74,9 +74,9 @@ class Homepage extends Component {
                 <header className="App-header">
                     <h2 style={{ margin: "0px", paddingTop: "150px" }}>Coronavirus Cases All Over The World</h2>
                     <div style={{ paddingTop: "5px", marginLeft: "5px", marginRight: "5px" }}>
-                        <Blink color='#d9534f ' text='Support Janta Curfew: Sunday 22 March,2020 from 7am to 9pm' fontSize='18'>
-                            Support Janta Curfew: Sunday 22 March,2020 from 7am to 9pm
-                    </Blink>
+                        <Blink color='#d9534f ' text='CoronaTrack requests its users maintain Social Distancing as per the order of States and Centre and remain in lockdown' fontSize='18'>
+                            CoronaTrack requests its users maintain Social Distancing as per the order of states and remain in lockdown.
+                            </Blink>
                         <a href="https://www.mohfw.gov.in/pdf/FAQ.pdf">FAQs on Covid-19</a>
                         <a href="https://icmr.nic.in/sites/default/files/upload_documents/COVID_19_Testing_Laboratories.pdf" style={{ paddingLeft: "20px" }}>Test Centres</a>
                     </div>
