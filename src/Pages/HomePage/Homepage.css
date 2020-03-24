@@ -11,7 +11,12 @@
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
-    max-height: 155px;
+    max-height: 190px;
+}
+
+.new-cases-confirmed {
+    color: red;
+    font-size: 20px;
 }
 
 .cases-text {
@@ -31,7 +36,12 @@
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
+    max-height: 190px;
+}
 
+.new-deaths-confirmed {
+    color: #282c34;
+    font-size: 20px;
 }
 
 .deaths-text {

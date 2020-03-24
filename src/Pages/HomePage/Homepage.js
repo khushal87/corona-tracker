@@ -74,8 +74,8 @@ class Homepage extends Component {
                 <header className="App-header">
                     <h2 style={{ margin: "0px", paddingTop: "150px" }}>Coronavirus Cases All Over The World</h2>
                     <div style={{ paddingTop: "5px", marginLeft: "5px", marginRight: "5px" }}>
-                        <Blink color='#d9534f ' text='CoronaTrack requests its users maintain Social Distancing as per the order of States and Centre and remain in lockdown' fontSize='18'>
-                            CoronaTrack requests its users maintain Social Distancing as per the order of states and remain in lockdown.
+                        <Blink color='#d9534f ' text='CoronaTrack Requests its Users Remain in Lockdown as per the Orders of Center.' fontSize='18'>
+                            CoronaTrack requests its Users remain in lockdown as per the orders of Center.
                             </Blink>
                         <a href="https://www.mohfw.gov.in/pdf/FAQ.pdf">FAQs on Covid-19</a>
                         <a href="https://icmr.nic.in/sites/default/files/upload_documents/COVID_19_Testing_Laboratories.pdf" style={{ paddingLeft: "20px" }}>Test Centres</a>
@@ -84,12 +84,14 @@ class Homepage extends Component {
                         <div className="col-xs-12 col-sm-10 col-md-5.5 col-lg-2">
                             <div className="cases">
                                 <h5 className="cases-text">Total Confirmed Cases</h5>
+                                <h6 className="new-cases-confirmed">{`[+${this.state.data.new_cases}]`}</h6>
                                 <h1 className="cases-data">{this.state.data.total_cases}</h1>
                             </div>
                         </div>
                         <div className="col-xs-12 col-sm-10 col-md-5.5 col-lg-2">
                             <div className="deaths">
-                                <h5 className="deaths-text">Total Deaths</h5>
+                                <h5 className="deaths-text">Total Confirmed Deaths</h5>
+                                <h6 className="new-deaths-confirmed">{`[+${this.state.data.new_deaths}]`}</h6>
                                 <h1 className="deaths-data">{this.state.data.total_deaths}</h1>
                             </div>
                         </div>
@@ -99,24 +101,24 @@ class Homepage extends Component {
                                 <h1 className="recovered-data">{this.state.data.total_recovered}</h1>
                             </div>
                         </div>
-                        <div className="column col-xs-12 col-sm-10 col-md-5.5 col-lg-3 new-worldwide">
-                            <div className="new-cases">
-                                <h5 className="new-cases-text">New Cases Worldwide </h5>
-                                <h1 className="new-cases-data">{this.state.data.new_cases}</h1>
-                            </div>
-                            <div className="new-deaths">
-                                <h5 className="new-deaths-text">New Death Cases Worldwide</h5>
-                                <h1 className="new-deaths-data">{this.state.data.new_deaths}</h1>
+                        <div className="col-xs-12 col-sm-10 col-md-5.5 col-lg-2">
+                            <div className="cases">
+                                <h5 className="cases-text">Total Confirmed Cases in India</h5>
+                                <h6 className="new-cases-confirmed">{`[+${this.state.india_data.new_cases}]`}</h6>
+                                <h1 className="cases-data">{this.state.india_data.total_cases}</h1>
                             </div>
                         </div>
-                        <div className="column col-xs-12 col-sm-10 col-md-5.5 col-lg-3 new-india" >
-                            <div className="new-cases">
-                                <h5 className="new-cases-text">New Cases in India</h5>
-                                <h1 className="new-cases-data">{this.state.india_data.new_cases !== "" ? this.state.india_data.new_cases : "NA"}</h1>
+                        <div className="col-xs-12 col-sm-10 col-md-5.5 col-lg-2">
+                            <div className="deaths">
+                                <h5 className="deaths-text">Total Confirmed Deaths in India</h5>
+                                <h6 className="new-deaths-confirmed">{`[+${this.state.india_data.new_deaths}]`}</h6>
+                                <h1 className="deaths-data">{this.state.india_data.total_deaths}</h1>
                             </div>
-                            <div className="new-deaths">
-                                <h5 className="new-deaths-text">New Death Cases in India</h5>
-                                <h1 className="new-deaths-data">{this.state.india_data.new_deaths !== "" ? this.state.india_data.new_deaths : "NA"}</h1>
+                        </div>
+                        <div className="col-xs-12 col-sm-10 col-md-5.5 col-lg-2">
+                            <div className="recovered">
+                                <h5 className="recovered-text">Total Recovered in India</h5>
+                                <h1 className="recovered-data">{this.state.india_data.total_recovered}</h1>
                             </div>
                         </div>
                     </div>

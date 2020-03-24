@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './StatesData.css';
-import Data from './data';
+import Axios from 'axios';
 
 class StatesData extends Component {
     constructor(props) {
@@ -11,8 +11,14 @@ class StatesData extends Component {
         }
     }
     componentDidMount() {
-        const data = Data;
-        this.setState({ data: data, filter_data: data })
+        Axios.get('https://api.covid19india.org/data.json').then((res) => {
+            const data = res.data.statewise;
+            const temp_data = [];
+            for (let i = 1; i < data.length; i++) {
+                temp_data.push(data[i]);
+            }
+            this.setState({ data: temp_data, filter_data: temp_data });
+        })
     }
 
     onChangeHandler = (event) => {
@@ -21,7 +27,7 @@ class StatesData extends Component {
         if (event.nativeEvent.text !== "") {
             currentList = this.state.data;
             newList = currentList.filter(item => {
-                const lc = item.NameOfState.toLowerCase();
+                const lc = item.state.toLowerCase();
                 const filter = event.target.value.toLowerCase();
                 return lc.includes(filter);
             });
@@ -40,11 +46,11 @@ class StatesData extends Component {
                 {
                     this.state.filter_data.map((indiData, key) => {
                         return <div className="country-data" key={key}>
-                            <div className="country-name">{indiData.NameOfState + " "}
+                            <div className="country-name">{indiData.state + " "}
                                 <div style={{ display: 'flex', flexDirection: "row", justifyContent: "space-around" }}>
-                                    <div className="country-deaths" style={{ color: "red" }}>Cases : {indiData.TotalConfirmedCasesIndian}</div>
-                                    <div className="country-deaths" style={{ color: "#282c84" }}>Cured : {indiData.Cured}</div>
-                                    <div className="country-deaths" style={{ color: "green" }}>Deaths : {indiData.Death}</div>
+                                    <div className="country-deaths" style={{ color: "red" }}>Cases : {indiData.confirmed}</div>
+                                    <div className="country-deaths" style={{ color: "green" }}>Cured : {indiData.recovered}</div>
+                                    <div className="country-deaths" style={{ color: "#282c84" }}>Deaths : {indiData.deaths}</div>
                                 </div>
 
                             </div>

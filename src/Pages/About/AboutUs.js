@@ -23,7 +23,7 @@ class AboutUs extends Component {
                     <a href="https://www.linkedin.com/in/khushal-agarwal-547370166/">Khushal Agarwal</a>
                     </h4>
                     <h3>This app is crafted by </h3>
-                    <img src={Image} style={{ borderRadius: "50px", height: "200px", width: "200px", marginBottom: "20px" }} />
+                    <img src={Image} style={{ borderRadius: "50px", height: "200px", width: "200px", marginBottom: "20px" }} alt="about" />
                 </div>
             </div>
         )

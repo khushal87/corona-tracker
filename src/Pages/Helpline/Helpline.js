@@ -39,14 +39,14 @@ class Helpline extends Component {
                         </thead>
                         <tbody>
 
-                            <tr>   <td>1</td><td>Andaman and NicobarIslands</td><td><a target="_blank" href="tel:03192232102">03192-232102</a></td></tr>
-                            <tr>   <td>2</td><td>Chandigarh</td><td><a target="_blank" href="tel:9779558282">9779558282</a></td></tr>
-                            <tr>   <td>3</td><td>Dadra and Nagar Haveli and Daman & Diu</td><td><a target="_blank" href="tel:104">104</a></td></tr>
-                            <tr>   <td>4</td><td>Delhi</td><td><a target="_blank" href="tel:01122307145">011-22307145</a></td></tr>
-                            <tr>   <td>5</td><td>Jammu & Kashmir</td><td><a target="_blank" href="tel:01912520982">01912520982</a> / <a target="_blank" href="tel:01942440283">0194-2440283</a></td></tr>
-                            <tr>   <td>6</td><td>Ladakh</td><td><a target="_blank" href="tel:01982256462">01982256462</a></td></tr>
-                            <tr>   <td>7</td><td>Lakshadweep</td><td><a target="_blank" href="tel:104">104</a></td></tr>
-                            <tr>   <td>7</td><td>Puducherry</td><td><a target="_blank" href="tel:104">104</a></td>
+                            <tr>   <td>1</td><td>Andaman and NicobarIslands</td><td><a rel="noopener noreferrer" target="_blank" href="tel:03192232102">03192-232102</a></td></tr>
+                            <tr>   <td>2</td><td>Chandigarh</td><td><a rel="noopener noreferrer" target="_blank" href="tel:9779558282">9779558282</a></td></tr>
+                            <tr>   <td>3</td><td>Dadra and Nagar Haveli and Daman & Diu</td><td><a rel="noopener noreferrer" target="_blank" href="tel:104">104</a></td></tr>
+                            <tr>   <td>4</td><td>Delhi</td><td><a target="_blank" rel="noopener noreferrer" href="tel:01122307145">011-22307145</a></td></tr>
+                            <tr>   <td>5</td><td>Jammu & Kashmir</td><td><a rel="noopener noreferrer" target="_blank" href="tel:01912520982">01912520982</a> / <a target="_blank" href="tel:01942440283">0194-2440283</a></td></tr>
+                            <tr>   <td>6</td><td>Ladakh</td><td><a rel="noopener noreferrer" target="_blank" href="tel:01982256462">01982256462</a></td></tr>
+                            <tr>   <td>7</td><td>Lakshadweep</td><td><a rel="noopener noreferrer" target="_blank" href="tel:104">104</a></td></tr>
+                            <tr>   <td>7</td><td>Puducherry</td><td><a rel="noopener noreferrer" target="_blank" href="tel:104">104</a></td>
 
                             </tr>
                         </tbody>

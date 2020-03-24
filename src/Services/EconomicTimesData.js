@@ -2,8 +2,7 @@ import Axios from 'axios';
 import cheerio from 'cheerio';
 
 const siteUrl = "https://economictimes.indiatimes.com/coronavirus";
-let siteName = "";
-const data = [];
+
 
 const fetchData = async () => {
     const result = await Axios.get(siteUrl);
@@ -12,7 +11,7 @@ const fetchData = async () => {
 
 const getResults = async () => {
     const $ = await fetchData();
-    var data, date, time;
+    var data;
     var json = { data: "", date: "", time: "" };
     $('.updateText').filter(function () {
         var temp_data = $(this);
