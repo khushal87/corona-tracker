@@ -52,7 +52,6 @@ class StatesData extends Component {
                                     <div className="country-deaths" style={{ color: "green" }}>Cured : {indiData.recovered}</div>
                                     <div className="country-deaths" style={{ color: "#282c84" }}>Deaths : {indiData.deaths}</div>
                                 </div>
-
                             </div>
                         </div>
                     })

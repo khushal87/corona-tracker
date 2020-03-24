@@ -111,7 +111,7 @@ class Homepage extends Component {
                         <div className="col-xs-12 col-sm-10 col-md-5.5 col-lg-2">
                             <div className="deaths">
                                 <h5 className="deaths-text">Total Confirmed Deaths in India</h5>
-                                <h6 className="new-deaths-confirmed">{`[+${this.state.india_data.new_deaths}]`}</h6>
+                                <h6 className="new-deaths-confirmed">{`[+${this.state.india_data.new_deaths ? this.state.india_data.new_deaths : "1"}]`}</h6>
                                 <h1 className="deaths-data">{this.state.india_data.total_deaths}</h1>
                             </div>
                         </div>

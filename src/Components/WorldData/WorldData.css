@@ -1,0 +1,17 @@
+.worldData table {
+    max-width: 100%;
+    margin-top: 50px;
+}
+
+.worldData tr:nth-child(odd) {}
+
+.worldData th {
+    background-color: #555;
+    color: #fff;
+}
+
+.worldData th,
+td {
+    text-align: left;
+    padding: 0.1em 1em;
+}
