@@ -10,6 +10,9 @@ import Feeds from '../../Components/Feeds/Feeds';
 import Axios from 'axios';
 import cheerio from 'cheerio';
 import { scrappedData } from '../../Services/EconomicTimesData';
+import {
+    LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+} from 'recharts';
 
 class Homepage extends Component {
     constructor(props) {
@@ -18,13 +21,11 @@ class Homepage extends Component {
             data: {},
             fetch_date: "",
             india_data: {},
+            confirmed_data: [],
+            deaths_data: [],
+            recovered_data: []
         }
     }
-
-    fetchData = async () => {
-        const siteUrl = "https://economictimes.indiatimes.com/coronavirus";
-
-    };
 
     componentDidMount() {
         var config = {
@@ -66,6 +67,18 @@ class Homepage extends Component {
             .catch(err => {
                 console.log(err);
             });
+        Axios.get('https://api.covid19india.org/data.json').then((res) => {
+            const data = res.data.cases_time_series;
+            const temp_data = [];
+            const temp_data1 = [];
+            const temp_data2 = [];
+            for (let i = 2; i < data.length - 1; i++) {
+                temp_data.push({ dailyconfirmed: data[i].totalconfirmed });
+                temp_data1.push({ dailyconfirmed: data[i].totaldeceased });
+                temp_data2.push({ dailyconfirmed: data[i].totalrecovered });
+            }
+            this.setState({ confirmed_data: temp_data, deaths_data: temp_data1, recovered_data: temp_data2 });
+        })
     }
     render() {
         return (
@@ -102,23 +115,34 @@ class Homepage extends Component {
                             </div>
                         </div>
                         <div className="col-xs-12 col-sm-10 col-md-5.5 col-lg-2">
-                            <div className="cases">
+                            {console.log(this.state.confirmed_data)}
+                            <div className="cases-india">
                                 <h5 className="cases-text">Total Confirmed Cases in India</h5>
                                 <h6 className="new-cases-confirmed">{`[+${this.state.india_data.new_cases}]`}</h6>
                                 <h1 className="cases-data">{this.state.india_data.total_cases}</h1>
+                                <LineChart width={180} height={80} data={this.state.confirmed_data} style={{ marginTop: '10px', marginLeft: "auto", marginRight: "auto" }}>
+                                    <Line dataKey='dailyconfirmed' stroke='red' strokeWidth={1} dot={false} onTouchEnd={() => console.log("hey")} />
+                                </LineChart>
                             </div>
                         </div>
+
                         <div className="col-xs-12 col-sm-10 col-md-5.5 col-lg-2">
-                            <div className="deaths">
+                            <div className="deaths-india">
                                 <h5 className="deaths-text">Total Confirmed Deaths in India</h5>
                                 <h6 className="new-deaths-confirmed">{`[+${this.state.india_data.new_deaths ? this.state.india_data.new_deaths : "1"}]`}</h6>
                                 <h1 className="deaths-data">{this.state.india_data.total_deaths}</h1>
+                                <LineChart width={180} height={80} data={this.state.deaths_data} style={{ marginTop: '10px', marginLeft: "auto", marginRight: "auto" }}>
+                                    <Line dataKey='dailyconfirmed' stroke='#282c34' strokeWidth={1} dot={false} />
+                                </LineChart>
                             </div>
                         </div>
                         <div className="col-xs-12 col-sm-10 col-md-5.5 col-lg-2">
-                            <div className="recovered">
+                            <div className="recovered-india">
                                 <h5 className="recovered-text">Total Recovered in India</h5>
                                 <h1 className="recovered-data">{this.state.india_data.total_recovered}</h1>
+                                <LineChart width={180} height={80} data={this.state.recovered_data} style={{ marginTop: '10px', marginLeft: "auto", marginRight: "auto" }}>
+                                    <Line dataKey='dailyconfirmed' stroke='green' strokeWidth={1} dot={false} />
+                                </LineChart>
                             </div>
                         </div>
                     </div>

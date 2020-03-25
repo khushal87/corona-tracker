@@ -15,7 +15,11 @@ class Feeds extends Component {
         Axios.get('https://covid19-repo.herokuapp.com/data').then((res) => {
             const data = [...res.data.data];
             data.sort((a, b) => (a.createdAt - b.createdAt)).reverse();
-            this.setState({ data: data, filter_data: data });
+            const temp_data = [];
+            for (let i = 0; i < 25; i++) {
+                temp_data.push(data[i]);
+            }
+            this.setState({ data: temp_data, filter_data: temp_data });
         })
     }
 
