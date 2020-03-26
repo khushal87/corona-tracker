@@ -13,6 +13,7 @@ import { scrappedData } from '../../Services/EconomicTimesData';
 import {
     LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
 } from 'recharts';
+import { Link } from 'react-router-dom';
 
 class Homepage extends Component {
     constructor(props) {
@@ -90,7 +91,8 @@ class Homepage extends Component {
                         <Blink color='#d9534f ' text='CoronaTrack Requests its Users Remain in Lockdown as per the Orders of Center.' fontSize='18'>
                             CoronaTrack requests its Users remain in lockdown as per the orders of Center.
                             </Blink>
-                        <a href="https://www.mohfw.gov.in/pdf/FAQ.pdf">FAQs on Covid-19</a>
+                        <Link to='/hospital-statistics'>Hospital Statistics</Link>
+                        <a href="https://www.mohfw.gov.in/pdf/FAQ.pdf" style={{ paddingLeft: "20px" }}>FAQs on Covid-19</a>
                         <a href="https://icmr.nic.in/sites/default/files/upload_documents/COVID_19_Testing_Laboratories.pdf" style={{ paddingLeft: "20px" }}>Test Centres</a>
                     </div>
                     <div className="report row">
