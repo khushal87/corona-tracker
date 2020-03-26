@@ -48,9 +48,9 @@ class StatesData extends Component {
                         return <div className="country-data" key={key}>
                             <div className="country-name">{indiData.state + " "}
                                 <div style={{ display: 'flex', flexDirection: "row", justifyContent: "space-around" }}>
-                                    <div className="country-deaths" style={{ color: "red" }}>Cases : {indiData.confirmed}</div>
-                                    <div className="country-deaths" style={{ color: "green" }}>Cured : {indiData.recovered}</div>
-                                    <div className="country-deaths" style={{ color: "#282c84" }}>Deaths : {indiData.deaths}</div>
+                                    <div className="country-deaths" style={{ color: "red",width:"180px" }}>Cases : {indiData.confirmed+ (indiData.delta.active!==0?` (+${indiData.delta.active})`:"")}</div>
+                                    <div className="country-deaths" style={{ color: "green",width:"150px" }}>Cured : {indiData.recovered+(indiData.delta.recovered!==0?` (+${indiData.delta.recovered})`:"")}</div>
+                                    <div className="country-deaths" style={{ color: "#282c84",width:"170px" }}>Deaths : {indiData.deaths+(indiData.delta.deaths   !==0?` (+${indiData.delta.deaths})`:"")}</div>
                                 </div>
                             </div>
                         </div>
