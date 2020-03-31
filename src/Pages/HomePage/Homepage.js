@@ -38,7 +38,7 @@ class Homepage extends Component {
         }).catch((error) => {
             console.log(error);
         })
-        fetch("https://coronavirus-monitor.p.rapidapi.com/coronavirus/worldstat.php", {
+        fetch("https://coronavirus-monitor.p.rapidapi.com/coronavirus/world_total_stat.php", {
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
@@ -53,7 +53,7 @@ class Homepage extends Component {
             .catch(err => {
                 console.log(err);
             });
-        fetch("https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country.php?country=INDIA", {
+        fetch("https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country_name.php?country=INDIA", {
             "method": "GET",
             "headers": {
                 "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
