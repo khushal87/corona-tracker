@@ -21,6 +21,8 @@ class CasesConfirmed extends Component {
             .then(response => {
                 return response.json();
             }).then((res) => {
+                const data = res.countries_stat;
+                data.splice(0, 1);
                 this.setState({ data: res.countries_stat, filter_data: res.countries_stat })
             })
             .catch(err => {
